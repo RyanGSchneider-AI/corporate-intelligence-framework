@@ -1,5 +1,4 @@
-# Templates
-
+# Corporate Intelligence Framework
 Reusable frameworks for corporate intelligence and AI-assisted execution.
 
 These templates are designed to be **independently useful across the organization**
