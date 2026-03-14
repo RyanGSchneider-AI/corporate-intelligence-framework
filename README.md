@@ -274,4 +274,4 @@ Every artifact is more useful partially populated than empty. A Strategy-and-Int
 ## This Framework is Evolving
 
 Templates are added and refined as they are applied to real work. If you use one and find a gap, open an issue or submit a PR.
-3/14 - Test move from Antigravity to VS Code IDE
+3/14 - Test move from Antigravity to VS Code IDE; refactored the repos
