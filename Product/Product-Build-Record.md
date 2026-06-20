@@ -4,7 +4,9 @@
 >
 > **This document is a unit of learning, not just a unit of delivery.** A prototype record that answers one question well and informs the next record has done its job — even if nothing was shipped to customers. The Validation Stage field in Document Control signals what this record is trying to learn or deliver, and determines which sections are load-bearing.
 >
-> **This document has a lifecycle.** Sections 1–11 are completed before build begins. Section 12 (Agent Handoff) is populated before handoff. Sections 13–14 are completed during and after execution. Each section completed adds value independently — a record with only the cost estimate and requirements is still useful. A record with actuals and retrospective is significantly more useful, and becomes a reference class anchor for future initiatives.
+> **This document is elaborated just-in-time, not front-loaded.** Fill each section to the depth the current increment actually needs — no more. Requirements, design, and estimates are expected to emerge and sharpen as you build and learn, not to be resolved in full before work starts. A record is not a gate to clear before development; it is a living workspace that grows alongside the work. Section 12 (Agent Handoff) is populated at handoff; Sections 13–14 are populated during and after execution. Each section completed adds value independently — and a record carried through to actuals and retrospective becomes a reference class anchor for future initiatives.
+>
+> **This record serves the team's velocity; it does not tax it.** The durable team keeps its autonomy and cadence in delivering value — the record's only job is to capture and broadcast learnings, and it should do so by augmenting the team (pulling context from commits, PRs, execution events, and metrics via AI assistance) rather than asking them to stop and write reports.
 >
 > Human teams may use this document without Section 12. AI-assisted teams will get significantly better results with Section 12 populated — it is the primary mechanism for reducing ambiguity at handoff.
 
@@ -17,13 +19,13 @@
 | **Initiative Name** | |
 | **Record Type** | Maintenance / Incremental Improvement / Strategic Request / Growth Initiative |
 | **Validation Stage** | Prototype / Pilot / Beta / A/B Test / General Availability |
-| **Status** | Scoping / Estimating / Approved / In Build / Complete / Cancelled |
+| **Status** | Shaping / In Build / Validating / Complete / Paused / Cancelled |
 | **Author** | |
 | **Created** | YYYY-MM-DD |
 | **Last Updated** | YYYY-MM-DD |
 | **Target Release** | YYYY-MM-DD |
 | **Actual Release** | YYYY-MM-DD |
-| **Linked Business Case** | [Link or "Not required — see record type guidance below"] |
+| **Linked Business Case** | [Optional — links to overarching prioritization context only, never an approval gate. Often "Not applicable"] |
 | **Prior Build Record(s)** | [Link to predecessor record(s) in this validation sequence, or "First in sequence"] |
 | **Linked Strategy Goal** | [Reference to Strategy-and-Intent goal this effort serves] |
 
@@ -40,7 +42,7 @@
 > - **A/B Test**: A specific variation tested against a control in a live environment. Requires a hypothesis, a measurement plan, a minimum sample size, and a decision framework defined before launch. Results feed directly into the next record or confirm GA readiness.
 > - **General Availability**: Full release to the intended audience. All prior validation stages have produced sufficient confidence to commit to broad rollout.
 >
-> **A single Business Case may be served by multiple Product Build Records moving through validation stages.** A prototype record produces findings that refine the pilot record's requirements. A pilot record produces findings that validate the Business Case benefit estimates before GA commitment. Each record is lightweight relative to its stage — a prototype record does not need a full non-functional requirements section. The validation stage field signals to every reader which sections are load-bearing for this record.
+> **A Business Case sets overarching, feature-level prioritization; Product Build Records deliver against it incrementally and do not loop back to it for approval or sequencing.** Once a direction is prioritized, the incremental, end-to-end delivery of value runs on its own cadence — each record captures lightweight, human-readable context for why choices were made and what was learned, rather than returning to a business-case gate. Findings flow forward: a prototype refines the next record's direction; a pilot sharpens what GA should be. Where findings materially change the original economic picture, they are surfaced back to the Business Case as context — not as a re-approval. Each record is lightweight relative to its stage — a prototype record does not need a full non-functional requirements section. The validation stage field signals to every reader which sections are load-bearing for this record.
 
 > **Section guidance by record type and validation stage:**
 >
@@ -60,6 +62,8 @@
 > | 12. Agent Handoff | Optional | Optional | Optional | Optional | Optional | Optional |
 > | 13. Execution Log | Required | Required | Required | Required | Required | Required |
 > | 14. Actuals & Retrospective | Required | Required | Required — findings feed next record | Required | Required — decision logged | Required |
+>
+> "Required" and "Full" describe the depth a section should eventually reach for that stage — not a checklist to complete before build starts. Elaborate each section just-in-time, when the increment in front of you needs it.
 
 
 > **Significant Change Log**
@@ -158,7 +162,7 @@
 
 ## 4. Cost Estimate
 
-> Estimates are completed before build approval. Actuals are recorded in Section 14.
+> Estimate to the depth the decision in front of you needs — a rough forecast to size a bet, not a gate to clear before work can start. Lightweight is the default; reach for three-point decomposition only when stakes or uncertainty justify it. Actuals are recorded in Section 14, and the estimate-vs-actual gap is where the learning is — that loop matters more than up-front precision.
 > All estimates reference the Cost-and-Benefit-Framework for methods and labor rates.
 
 ### 4.1 Estimate Stage
@@ -168,7 +172,7 @@
 - [ ] **Three-Point** — scope sufficiently defined to decompose; optimistic / most likely / pessimistic inputs provided
 - [ ] **Revised** — estimate updated after scope change or new information; original estimate preserved below
 
-> Use ROM when the initiative is in early exploration and scope is not yet defined enough to decompose. Promote to Three-Point before build approval. If scope changes materially during build, create a revised estimate and preserve the original.
+> Use ROM when the initiative is in early exploration and scope is not yet defined enough to decompose. Promote to Three-Point when a higher-stakes commitment genuinely needs tighter confidence — not as a mandatory gate before work can begin. If scope changes materially during delivery, create a revised estimate and preserve the original.
 
 ---
 
@@ -287,13 +291,15 @@
 
 **Estimate confidence:** [High / Medium / Low]
 **Primary risk to estimate:** [The single assumption that, if wrong, most changes the estimate.]
-**Approved by:** [Name] **Date:** YYYY-MM-DD
+**Estimate reviewed by:** [Name] **Date:** YYYY-MM-DD
 
 ---
 
 ## 5. Functional Requirements
 
-> Each requirement has a unique ID for traceability through development, testing, and retrospective.
+> Capture requirements at the altitude the work needs, and expect them to change as you build and learn — this is a backlog, not a frozen specification. Add, drop, and re-shape items as increments deliver and feedback comes in.
+>
+> **Requirement IDs and traceability are optional.** The `REQ-001` IDs below exist to thread requirements → stories → tests for efforts that need an audit trail (regulated, compliance-bound, or large multi-team builds). For most incremental and maintenance work, skip the IDs and write lightweight acceptance criteria directly on the stories in Section 6.
 > **Priority**: P0 = Must have (launch blocker) | P1 = Should have | P2 = Nice to have
 
 ### 5.1 Feature Area: [e.g., User Authentication]
@@ -359,6 +365,7 @@
 
 ## 7. Non-Functional Requirements
 
+> Capture the non-functional requirements the current increment actually touches — the performance, security, accessibility, and reliability bars relevant now. Don't pre-specify the full set up front; add to this section as increments reach surfaces that need it.
 > Maintenance and Incremental: complete only sections affected by this change.
 
 ### 7.1 Performance
@@ -667,13 +674,13 @@ In plain language, the goal of this build is: [One sentence — what are we buil
 
 ### 12.5 Definition of Done
 
-- [ ] All P0 requirements in Section 5 are implemented
-- [ ] All P0 acceptance criteria in Section 6 are passing
-- [ ] All test cases in Section 11.1 pass
+- [ ] The increment is working, validated, and delivers the value this record set out to deliver
+- [ ] Acceptance criteria for the agreed scope are passing (P0 requirements in Section 5 and stories in Section 6, where used)
+- [ ] All test cases in Section 11 pass
 - [ ] No regressions in [existing feature / test suite]
 - [ ] Code is documented and follows [style guide / conventions link]
 - [ ] Test results are filled into Section 11
-- [ ] Any deviations from requirements are documented with rationale
+- [ ] Any deviations from the agreed scope are documented with rationale
 - [ ] PR submitted to [branch] with staging deployment link confirmed
 
 ---

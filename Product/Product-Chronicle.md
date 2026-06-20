@@ -140,9 +140,10 @@ This is often the most useful language for sales and renewal conversations.]
 > and who it is now being aimed at, and to govern how that tension is resolved
 > through deliberate updates to the Customer Lens and Design Principles.
 >
-> When a strategic shift occurs, this section should be completed before any
-> changes are made to Section 2 (Customer Lens) or Section 4 (Design Principles).
-> It is the bridge between organizational strategy and product governance.
+> When a strategic shift occurs, capture the reasoning here as you work through its
+> impact on Section 2 (Customer Lens) and Section 4 (Design Principles) — so the *why*
+> behind those updates is preserved alongside them, not reconstructed later. It is the
+> bridge between organizational strategy and product governance.
 
 ### 3.1 Strategic Shifts Log
 > A record of strategic direction changes that have affected or may affect this product.

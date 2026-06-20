@@ -136,7 +136,7 @@
 | [e.g., Executive Leadership Team] | [Name] | [e.g., CEO] | [e.g., Company strategy, cross-functional alignment, investment decisions] | All departments | [e.g., Weekly] | |
 | [e.g., Product Review Board] | [Name] | [e.g., CPO / VP Product] | [e.g., Roadmap prioritization, feature approval, resource allocation] | Product, Engineering, Sales, Finance | [e.g., Bi-weekly] | |
 | [e.g., Risk & Compliance Committee] | [Name] | [e.g., General Counsel / CCO] | [e.g., Regulatory adherence, risk assessment, audit readiness] | Legal, Compliance, Finance, Engineering | [e.g., Monthly] | |
-| [e.g., Change Advisory Board (CAB)] | [Name] | [e.g., Engineering Lead] | [e.g., Review and approve significant technical changes before deployment] | Engineering, Product, Operations | [e.g., Weekly] | [e.g., Required sign-off for production releases] |
+| [e.g., Architecture Review Board] | [Name] | [e.g., Principal Engineer] | [e.g., Advise on significant technical direction and cross-cutting design decisions] | Engineering, Product, Operations | [e.g., Bi-weekly] | [e.g., Consulted on major architecture changes — advisory, not a release gate] |
 | [e.g., Budget & Investment Committee] | [Name] | [e.g., CFO] | [e.g., Capital allocation, vendor approvals, initiative funding] | Finance, Executive, Department heads | [e.g., Quarterly] | |
 
 > Add or remove rows to reflect active committees in your organization.

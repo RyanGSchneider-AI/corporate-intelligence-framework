@@ -1,26 +1,33 @@
 # Business Case: [Initiative Name]
 > Part of the Corporate Intelligence Framework — Product
 >
-> The Business Case answers one question: *Should we pursue this?*
-> It is the argument for committing organizational resources — time, money, and attention —
-> to a specific initiative. It is written before a Product Build Record and informs whether one
-> should exist at all.
+> The Business Case answers one question, at the level of overarching, feature-level prioritization:
+> *Is this direction worth pursuing relative to the others competing for our attention?*
+> It is a thinking artifact for deciding which broad bets earn investment — time, money, and
+> attention — not a gate that each increment of delivery must pass through.
 >
-> **A Business Case is recommended but not required.** Not every initiative needs a
-> formal Business Case — a small maintenance update or a quick fix may need nothing
-> more than a Product Build Record. But most decisions that consume meaningful organizational resources
-> benefit from at least a brief, honest answer to: what are we doing, why does it matter,
-> and is it worth it? Even a few paragraphs of clear reasoning is a Business Case in spirit.
-> This template scales from that brief rationale to a formal executive or investor document.
+> **It operates at the prioritization level, not the delivery level.** A Business Case helps the
+> organization choose between directions. Once a direction is prioritized, the incremental,
+> iterating, end-to-end delivery of value runs on its own cadence in Product Build Records — it does
+> not return here for per-effort approval or sequencing. Records deliver against an already-prioritized
+> direction and capture lightweight, human-readable context for why choices were made; that learning
+> may flow back here as context, but not as a re-approval step.
+>
+> **A Business Case is recommended for prioritization decisions, not required per effort.** Most
+> day-to-day, maintenance, and incremental work needs nothing more than a Product Build Record.
+> Reserve the Business Case for the overarching question — a new feature area, a new segment, a
+> significant bet — where the organization genuinely needs to decide whether and where to invest.
+> Even a few paragraphs of honest reasoning is a Business Case in spirit; this template scales from
+> that up to a formal executive or investor document.
 >
 > **A Business Case is not a Product Build Record.** It does not define requirements or solutions in detail.
-> It defines the problem, the opportunity, and the argument for acting — or not acting.
-> A Product Build Record follows if the Business Case is approved.
+> It frames the problem, the opportunity, and the argument for prioritizing a direction — or not.
+> Build Records deliver against it incrementally; they do not wait on it.
 >
-> **Rejected Business Cases have value.** A "no" decision recorded here becomes
-> institutional memory. It prevents the same initiative from being relitigated without
-> the context of why it was previously declined. File rejected cases in
-> Institutional-Knowledge.md with a summary and link.
+> **Rejected or deprioritized cases have value.** A "no" or "not now" recorded here becomes
+> institutional memory. It prevents the same direction from being relitigated without the context
+> of why it was previously declined. File rejected cases in Institutional-Knowledge.md with a
+> summary and link.
 
 ---
 
@@ -32,8 +39,8 @@
 | **Author** | |
 | **Sponsor** | |
 | **Date** | YYYY-MM-DD |
-| **Status** | Draft / Under Review / Approved / Rejected / On Hold |
-| **Decision Needed By** | YYYY-MM-DD |
+| **Status** | Draft / Under Review / Prioritized / Declined / On Hold |
+| **Time Sensitivity** | [A real external window that should weigh in prioritization — competitive, regulatory, or customer-commitment driven — with the date if known. "None" if it can be weighed on its merits.] |
 | **Related Build Record(s)** | [Link to Product-Build-Record(s) if they exist — a build record may precede or follow this document] |
 
 
@@ -190,10 +197,11 @@ especially in organizations where capacity, not budget, is the primary constrain
 
 **Recommendation**: [Proceed / Proceed with conditions / Do not proceed / Defer to [date]]
 
-**What approval authorizes**:
-[What specifically is being approved — a full build, a discovery phase, a pilot,
-a budget allocation? Be precise. Approval of a Business Case is not the same as
-approval of full scope — the Product Build Record defines that.]
+**What this prioritization decision commits the organization to**:
+[What prioritizing this direction means — a place on the roadmap, a budget envelope, a
+discovery phase? Be precise. Prioritizing a direction is not the same as approving scope or
+sequencing delivery — Product Build Records own that, and they deliver incrementally without
+returning here for approval.]
 
 **Next step if approved**:
 [e.g., Begin Product Build Record scoping — estimated completion YYYY-MM-DD]

@@ -399,7 +399,7 @@ Use when scope is not yet defined enough to decompose — early exploration, go/
 - State the scope assumption behind each end of the range explicitly
 - Label the estimate as ROM whenever it is used — a decision-maker who mistakes a ROM for a committed estimate will be misled
 - Typical accuracy: −50% to +100% of actual cost
-- **Promote to Three-Point before any build is approved**
+- **Promote to Three-Point when a higher-stakes commitment genuinely needs tighter confidence — not as a mandatory gate before work can begin**
 
 *ROM example:*
 > Scope is not yet defined. If limited to the core workflow only: 3–5 weeks. If full integration and compliance work is required: 8–14 weeks. ROM — not for budget commitment.
@@ -408,7 +408,7 @@ Use when scope is not yet defined enough to decompose — early exploration, go/
 
 **Three-Point Estimation**
 
-Use when scope is sufficiently defined to decompose into phases or major work items. Three-point is the standard method for all approved builds.
+Use when scope is sufficiently defined to decompose into phases or major work items, and the commitment is large or uncertain enough to justify the effort. Three-point sharpens confidence where it matters — it is not a mandatory step for every build.
 
 Three inputs are required per work item or phase:
 - **O (Optimistic):** Best realistic case — everything goes smoothly, no surprises

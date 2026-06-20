@@ -53,7 +53,7 @@ By capturing not just *what* was decided but *why* — not just *how* work gets 
 │   └── People-and-Talent-Strategy.md  ← How the organization thinks about hiring, capability gaps, succession, and the skills needed to execute strategy
 │
 ├── Product
-│   ├── Business-Case.md               ← Rationale for pursuing an effort
+│   ├── Business-Case.md               ← Overarching prioritization: why a direction is worth pursuing
 │   ├── Product-Build-Record.md        ← Full initiative lifecycle — estimate, build, actuals, retrospective
 │   ├── Product-Chronicle.md           ← Living product intelligence: design principles, tradeoff rationale, customer understanding, competitive positioning, and internal narrative
 │   └── Product-Design-Guide.md        ← Persistent UI/UX standards, interaction patterns, voice and tone, and accessibility commitments — governs all Product Build Records that touch UI/UX
@@ -78,7 +78,7 @@ By capturing not just *what* was decided but *why* — not just *how* work gets 
 | File | Description | Governed By | Serves |
 |---|---|---|---|
 | [Brand-and-Narrative.md](./Market-and-Customer/Brand-and-Narrative.md) | Narrative architecture, voice principles, messaging hierarchy, and core story — ensures consistent communication across every context and audience | Marketing and Executive leadership | Marketing, Sales, Product, Executive Leadership, AI agents |
-| [Business-Case.md](./Product/Business-Case.md) | Rationale for pursuing a product effort — scales from brief internal reasoning to formal executive approval | Product strategy and executive approval | Product, Finance, Executive Leadership |
+| [Business-Case.md](./Product/Business-Case.md) | Overarching, feature-level prioritization rationale — why a direction is worth pursuing relative to others; a thinking artifact, not a per-effort gate. Scales from brief internal reasoning to a formal executive document | Product strategy and prioritization | Product, Finance, Executive Leadership |
 | [Calendar-YYYY.md](./Rhythm-and-Calendar/Calendar-YYYY.md) | Per-year instance of the organizational calendar — confirmed event dates, release windows, freeze periods, compliance deadlines, and capacity pressure summary for the fiscal year; one file per year, named Calendar-YYYY | Operations and Executive leadership | All teams, Product, Sales, Finance |
 | [Company-Cadences.md](./Rhythm-and-Calendar/Company-Cadences.md) | Structural rhythms of the organization — fiscal year boundaries, release philosophy, planning cycles, sales rhythms, and recurring capacity pressure patterns; evergreen template that each Calendar-YYYY is built from | Operations and Executive leadership | All teams, Product, Sales, Finance |
 | [Competitive-Intelligence.md](./Market-and-Customer/Competitive-Intelligence.md) | Direct competitor profiles, substitute solution analysis, status quo alternatives, win/loss patterns, and a continuous competitive signal log | Product, Marketing, and Sales leadership | Product, Sales, Marketing, Executive Leadership |
@@ -117,7 +117,7 @@ If they don't, move forward independently.
 hardcoded references within each file. The README is the map. Connections are made
 in context — in a Product Build Record, a Business Case, a meeting — not maintained as lists inside
 every document. Relationships between artifacts are flexible and situational: a
-Business Case can spawn multiple Product Build Records, a Product Build Record may support multiple Business Cases,
+Business Case can inform the prioritization behind multiple Product Build Records, a Product Build Record may support multiple Business Cases,
 and a Maintenance record may have no Business Case at all. No relationship is assumed
 — all are possible.
 
@@ -215,7 +215,7 @@ A natural pull sequence for common efforts:
 | Starting effort | Pulls in next | Then pulls in |
 |---|---|---|
 | Product idea | Business-Case | Strategy-and-Intent, Cost-and-Benefit-Framework, Roles-and-Personas |
-| Building a product | Product-Build-Record | Business-Case, Product-Chronicle, Product-Design-Guide, Systems-and-Data |
+| Building a product | Product-Build-Record | Product-Chronicle, Product-Design-Guide, Systems-and-Data (Business-Case only as prioritization context, if one exists) |
 | Closing a deal | Sales-Playbook | Go-to-Market, Roles-and-Personas, Competitive-Intelligence, Reference-Customers-and-Champions |
 | Hiring a key role | People-and-Talent-Strategy | Strategy-and-Intent, Internal-Stakeholders |
 | Launching in a new market | Go-to-Market | Roles-and-Personas, Competitive-Intelligence, Brand-and-Narrative, Strategy-and-Intent |
