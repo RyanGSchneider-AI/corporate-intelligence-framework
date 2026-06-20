@@ -136,6 +136,14 @@ AI handoff makes a good human handoff too. An AI agent operating from this
 framework has the context to act with intent — not just instructions, but the
 reasoning and organizational memory behind them.
 
+**Automated, not imposed** — the framework captures decisions, learnings, and
+outcomes as a *byproduct of work*, never through gates, ceremonies, or top-down
+sign-off. Documentation should be pulled from where work already happens — commits,
+PRs, execution events, metrics, meetings — and synthesized into human-readable memory
+by AI assistance. An artifact that slows a team down to feed it is mis-instrumented.
+The goal is to augment delivery and preserve learning *without taxing the autonomy or
+velocity of the teams doing the work.*
+
 ---
 
 ## How to Use These Templates

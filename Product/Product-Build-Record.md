@@ -44,26 +44,27 @@
 >
 > **A Business Case sets overarching, feature-level prioritization; Product Build Records deliver against it incrementally and do not loop back to it for approval or sequencing.** Once a direction is prioritized, the incremental, end-to-end delivery of value runs on its own cadence — each record captures lightweight, human-readable context for why choices were made and what was learned, rather than returning to a business-case gate. Findings flow forward: a prototype refines the next record's direction; a pilot sharpens what GA should be. Where findings materially change the original economic picture, they are surfaced back to the Business Case as context — not as a re-approval. Each record is lightweight relative to its stage — a prototype record does not need a full non-functional requirements section. The validation stage field signals to every reader which sections are load-bearing for this record.
 
-> **Section guidance by record type and validation stage:**
+> **How much depth each section warrants — by record type and validation stage.**
+> A guide for *right-sizing* a record, not a checklist of deliverables. Nothing here is a gate; it points to where the signal is for the work in front of you, and every section is still elaborated just-in-time.
 >
 > | Section | Maintenance | Incremental | Strategic / Growth — Prototype | Strategic / Growth — Pilot / Beta | Strategic / Growth — A/B | Strategic / Growth — GA |
 > |---|---|---|---|---|---|---|
 > | 1. Problem Statement | 1.2 only | All | All | All | 1.2 + hypothesis | All |
 > | 2. Goals & Metrics | Goals + 1 KPI | All | Learning goals only | All | Hypothesis + success metric | All |
-> | 3. Personas | Optional | Optional | Lightweight | Required | Required | Required |
-> | 4. Cost Estimate | Required | Required | ROM acceptable | Three-point | ROM acceptable | Three-point |
-> | 5. Functional Requirements | Required | Required | Lightweight — core concept only | Full | Variation defined only | Full |
-> | 6. User Stories | Optional | Required | Optional | Required | Optional | Required |
+> | 3. Personas | Optional | Optional | Lightweight | Recommended | Recommended | Recommended |
+> | 4. Cost Estimate | Optional — relative value by default | Optional — relative value by default | ROM if a figure is needed | Optional | ROM if a figure is needed | Three-point if a financial commitment needs it |
+> | 5. Functional Requirements | Recommended | Recommended | Lightweight — core concept only | Full | Variation defined only | Full |
+> | 6. User Stories | Optional | Recommended | Optional | Recommended | Optional | Recommended |
 > | 7. Non-Functional Requirements | Affected only | Affected only | Skip | Key areas only | Skip | All |
-> | 8. Design & UX | Optional | Required | Wireframes / mockups | Required | Required | Required |
-> | 9. Dependencies & Constraints | Required | Required | Key blockers only | Required | Required | Required |
-> | 10. Open Questions | Required | Required | Required — questions drive the prototype | Required | Required | Required |
-> | 11. Test & Validation | Required | Required | Concept validation methods | Pilot-appropriate methods | A/B test plan | Full QA + sign-off |
+> | 8. Design & UX | Optional | Recommended | Wireframes / mockups | Recommended | Recommended | Recommended |
+> | 9. Dependencies & Constraints | Recommended | Recommended | Key blockers only | Recommended | Recommended | Recommended |
+> | 10. Open Questions | Recommended | Recommended | Recommended — questions drive the prototype | Recommended | Recommended | Recommended |
+> | 11. Test & Validation | Recommended | Recommended | Concept validation methods | Pilot-appropriate methods | A/B test plan | Full QA + sign-off |
 > | 12. Agent Handoff | Optional | Optional | Optional | Optional | Optional | Optional |
-> | 13. Execution Log | Required | Required | Required | Required | Required | Required |
-> | 14. Actuals & Retrospective | Required | Required | Required — findings feed next record | Required | Required — decision logged | Required |
+> | 13. Execution Log | Recommended | Recommended | Recommended | Recommended | Recommended | Recommended |
+> | 14. Actuals & Retrospective | Recommended | Recommended | Recommended — findings feed next record | Recommended | Recommended — decision logged | Recommended |
 >
-> "Required" and "Full" describe the depth a section should eventually reach for that stage — not a checklist to complete before build starts. Elaborate each section just-in-time, when the increment in front of you needs it.
+> "Full" and the per-cell depths describe how far a section should eventually go for that stage — not what must exist before build starts. Elaborate each just-in-time. The learning-capture sections (Execution Log, Actuals & Retrospective) are the framework's strong default — populate them as a byproduct of the work, ideally automated, never as a gate.
 
 
 > **Significant Change Log**
@@ -162,7 +163,7 @@
 
 ## 4. Cost Estimate
 
-> Estimate to the depth the decision in front of you needs — a rough forecast to size a bet, not a gate to clear before work can start. Lightweight is the default; reach for three-point decomposition only when stakes or uncertainty justify it. Actuals are recorded in Section 14, and the estimate-vs-actual gap is where the learning is — that loop matters more than up-front precision.
+> Estimate to the depth the decision in front of you needs — a rough forecast to size a bet, not a gate to clear before work can start. **When sequencing the development work itself, order it by relative business value — the agile default — rather than absolute cost.** ROM and Three-Point (see Cost-and-Benefit-Framework) are *available tools* for putting a money figure behind a financial commitment, not required steps — reach for them only when stakes or uncertainty justify it. Actuals are recorded in Section 14, and the estimate-vs-actual gap is where the learning is — that loop matters more than up-front precision.
 > All estimates reference the Cost-and-Benefit-Framework for methods and labor rates.
 
 ### 4.1 Estimate Stage
@@ -172,7 +173,7 @@
 - [ ] **Three-Point** — scope sufficiently defined to decompose; optimistic / most likely / pessimistic inputs provided
 - [ ] **Revised** — estimate updated after scope change or new information; original estimate preserved below
 
-> Use ROM when the initiative is in early exploration and scope is not yet defined enough to decompose. Promote to Three-Point when a higher-stakes commitment genuinely needs tighter confidence — not as a mandatory gate before work can begin. If scope changes materially during delivery, create a revised estimate and preserve the original.
+> Use ROM when the initiative is in early exploration and scope is not yet defined enough to decompose. Three-Point is available when a higher-stakes financial commitment genuinely needs tighter confidence — an optional tool, never a gate before work can begin. If scope changes materially during delivery, create a revised estimate and preserve the original. For ordering the development work itself, sequence by relative business value rather than absolute cost.
 
 ---
 

@@ -20,7 +20,7 @@
 
 > **Connected artifacts:**
 > - **Company-Cadences** — the structural rhythms this calendar is built from; consult for context on why cadences are shaped the way they are
-> - **Business-Case** — timing and resource availability should be evaluated against Section 7 (Annual View) before approval
+> - **Business-Case** — timing and capacity should be weighed against Section 7 (Annual View) when prioritizing a direction
 > - **Product-Build-Record** — launch windows, freeze periods, and capacity constraints should be noted in Dependencies and Constraints
 > - **Organizational-Risk-and-Compliance** — compliance filing deadlines and audit windows here should match the obligations register there
 

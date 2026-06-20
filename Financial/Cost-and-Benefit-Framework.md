@@ -389,7 +389,9 @@ The initiative reduces average outage cost to $30,000 by enabling faster recover
 
 #### Estimation Stage: ROM vs. Three-Point
 
-> The appropriate estimation method depends on how well scope is defined at the time the estimate is needed.
+> ROM and Three-Point are *available tools* for putting a cost figure on an initiative when a financial decision needs one — neither is required. Which one fits depends on how well scope is defined and how much rides on the number.
+>
+> **For sizing and sequencing the actual work in development, use relative business value — not absolute cost estimates.** Teams move faster ordering work by its value relative to other work (the agile default) than by grinding out a precise hours-and-dollars figure for every item. Reach for ROM or Three-Point only when a real financial commitment — a budget envelope, an investment decision, a Business Case — needs a money number behind it.
 
 **ROM (Rough Order of Magnitude)**
 
@@ -399,7 +401,7 @@ Use when scope is not yet defined enough to decompose — early exploration, go/
 - State the scope assumption behind each end of the range explicitly
 - Label the estimate as ROM whenever it is used — a decision-maker who mistakes a ROM for a committed estimate will be misled
 - Typical accuracy: −50% to +100% of actual cost
-- **Promote to Three-Point when a higher-stakes commitment genuinely needs tighter confidence — not as a mandatory gate before work can begin**
+- **Three-Point is available when a higher-stakes financial commitment genuinely needs tighter confidence — a tool, not a required step or a gate before work can begin**
 
 *ROM example:*
 > Scope is not yet defined. If limited to the core workflow only: 3–5 weeks. If full integration and compliance work is required: 8–14 weeks. ROM — not for budget commitment.
@@ -408,7 +410,7 @@ Use when scope is not yet defined enough to decompose — early exploration, go/
 
 **Three-Point Estimation**
 
-Use when scope is sufficiently defined to decompose into phases or major work items, and the commitment is large or uncertain enough to justify the effort. Three-point sharpens confidence where it matters — it is not a mandatory step for every build.
+An available tool — not required. Reach for it when scope is defined enough to decompose *and* a financial commitment is large or uncertain enough to justify the effort. Three-point sharpens confidence where money is on the line; it is never a mandatory step, and it is not how day-to-day development work should be sized — sequence that by relative business value instead.
 
 Three inputs are required per work item or phase:
 - **O (Optimistic):** Best realistic case — everything goes smoothly, no surprises
