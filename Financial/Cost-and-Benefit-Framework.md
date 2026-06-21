@@ -436,7 +436,7 @@ Apply at the phase level for most initiatives. Decompose to work-item level for 
 
 | Provenance Type | Description | Typical Confidence |
 |---|---|---|
-| **Historical analogy** | Based on a comparable completed initiative; similarity assessment completed in the Product Build Record | Highest — when the analogy is sound |
+| **Historical analogy** | Based on a comparable completed initiative; the comparison is noted in the Product Build Record cost summary | Highest — when the analogy is sound |
 | **Structured decomposition** | Built from individual work items estimated independently via Three-Point | High — when scope is well-defined |
 | **Expert judgment** | Based on the informed assessment of a qualified team member, with reasoning documented | Medium |
 | **Assumption** | No prior basis; reflects best judgment with no supporting data | Low — must be flagged clearly |
@@ -456,7 +456,7 @@ Apply at the phase level for most initiatives. Decompose to work-item level for 
 2. Note its actual cost and the primary driver of any variance from its own estimate
 3. Identify where the new initiative differs from the reference — more complex, less familiar, different team, different dependencies
 4. Adjust the reference class cost for those differences as the anchor for your Most Likely (M) input
-5. Document the reference and the adjustment in the Product Build Record Similarity Assessment
+5. Document the reference and the adjustment in the Product Build Record cost summary (Section 4)
 
 > Organizations without cost history should begin building it immediately. Every completed Product Build Record is a data point. After 10–15 completed records, reference class patterns will begin to emerge — what integrations actually cost, what compliance work actually takes, what estimates systematically under- or over-perform.
 

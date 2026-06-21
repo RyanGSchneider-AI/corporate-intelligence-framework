@@ -6,7 +6,7 @@
 >
 > **This document is elaborated just-in-time, not front-loaded.** Fill each section to the depth the current increment actually needs — no more. Requirements, design, and estimates are expected to emerge and sharpen as you build and learn, not to be resolved in full before work starts. A record is not a gate to clear before development; it is a living workspace that grows alongside the work. Section 12 (Agent Handoff) is populated at handoff; Sections 13–14 are populated during and after execution. Each section completed adds value independently — and a record carried through to actuals and retrospective becomes a reference class anchor for future initiatives.
 >
-> **This record serves the team's velocity; it does not tax it.** The durable team keeps its autonomy and cadence in delivering value — the record's only job is to capture and broadcast learnings, and it should do so by augmenting the team (pulling context from commits, PRs, execution events, and metrics via AI assistance) rather than asking them to stop and write reports.
+> **This record serves the team's velocity; it does not tax it.** The durable team pulls prioritized work and owns how and when it is sequenced — the Business Case sets which directions earn investment, and the team owns delivery, keeping its autonomy and cadence. The record's only job is to capture and broadcast learnings, and it should do so by augmenting the team (pulling context from commits, PRs, execution events, and metrics via AI assistance) rather than asking them to stop and write reports.
 >
 > Human teams may use this document without Section 12. AI-assisted teams will get significantly better results with Section 12 populated — it is the primary mechanism for reducing ambiguity at handoff.
 
@@ -53,8 +53,8 @@
 > | 2. Goals & Metrics | Goals + 1 KPI | All | Learning goals only | All | Hypothesis + success metric | All |
 > | 3. Personas | Optional | Optional | Lightweight | Recommended | Recommended | Recommended |
 > | 4. Cost Estimate | Optional — relative value by default | Optional — relative value by default | ROM if a figure is needed | Optional | ROM if a figure is needed | Three-point if a financial commitment needs it |
-> | 5. Functional Requirements | Recommended | Recommended | Lightweight — core concept only | Full | Variation defined only | Full |
-> | 6. User Stories | Optional | Recommended | Optional | Recommended | Optional | Recommended |
+> | 5. Functional Requirements (regulated overlay) | Skip unless regulated | Skip unless regulated | Skip unless regulated | Skip unless regulated | Skip unless regulated | Skip unless regulated |
+> | 6. User Stories (requirements home) | Recommended | Recommended | Lightweight — core concept only | Full | Variation defined only | Full |
 > | 7. Non-Functional Requirements | Affected only | Affected only | Skip | Key areas only | Skip | All |
 > | 8. Design & UX | Optional | Recommended | Wireframes / mockups | Recommended | Recommended | Recommended |
 > | 9. Dependencies & Constraints | Recommended | Recommended | Key blockers only | Recommended | Recommended | Recommended |
@@ -166,165 +166,44 @@
 > Estimate to the depth the decision in front of you needs — a rough forecast to size a bet, not a gate to clear before work can start. **When sequencing the development work itself, order it by relative business value — the agile default — rather than absolute cost.** ROM and Three-Point (see Cost-and-Benefit-Framework) are *available tools* for putting a money figure behind a financial commitment, not required steps — reach for them only when stakes or uncertainty justify it. Actuals are recorded in Section 14, and the estimate-vs-actual gap is where the learning is — that loop matters more than up-front precision.
 > All estimates reference the Cost-and-Benefit-Framework for methods and labor rates.
 
-### 4.1 Estimate Stage
+### 4.1 Cost Summary
 
-**Current estimate stage**: [Select one]
-- [ ] **ROM (Rough Order of Magnitude)** — scope not yet defined; range estimate only; appropriate for go/no-go scoping conversations
-- [ ] **Three-Point** — scope sufficiently defined to decompose; optimistic / most likely / pessimistic inputs provided
-- [ ] **Revised** — estimate updated after scope change or new information; original estimate preserved below
+> Lightweight by default. Capture a rough cost only if a financial decision needs one — otherwise note that delivery is sequenced by relative business value and move on.
 
-> Use ROM when the initiative is in early exploration and scope is not yet defined enough to decompose. Three-Point is available when a higher-stakes financial commitment genuinely needs tighter confidence — an optional tool, never a gate before work can begin. If scope changes materially during delivery, create a revised estimate and preserve the original. For ordering the development work itself, sequence by relative business value rather than absolute cost.
-
----
-
-### 4.2 Estimate Provenance
-
-> Required for every estimate. States what the estimate is based on so decision-makers understand its reliability.
-
-**Provenance type**: [Select one]
-- [ ] **Historical analogy** — based on a comparable completed initiative; similarity assessment completed below
-- [ ] **Structured decomposition** — built from individual work items estimated independently; three-point applied per item or phase
-- [ ] **Expert judgment** — based on the informed assessment of a qualified team member, with reasoning documented
-- [ ] **Assumption** — no prior basis; reflects best judgment with no supporting data — flag clearly in review
-
-**Provenance notes:**
-[Describe the basis in one or two sentences. e.g., Structured decomposition — broken into 4 phases; three-point applied per phase by the engineering lead and PM independently, then reconciled. No comparable prior initiative exists in the Cost History Log.]
-
----
-
-### 4.3 Similarity Assessment
-> Complete when provenance type is Historical Analogy. Skip if no comparable initiative exists — note that absence explicitly.
-
-**Most comparable prior initiative:** [Initiative name / link to its Product Build Record]
-
-**What makes it comparable:**
-- [e.g., Similar integration pattern — same third-party API category]
-- [e.g., Similar team composition — same engineering pair]
-- [e.g., Similar scope — equivalent number of user-facing surfaces affected]
-
-**Where this initiative differs:**
-- [e.g., Higher data volume requirements — may affect infrastructure cost]
-- [e.g., New compliance requirement with no prior precedent in our stack]
-- [e.g., Less organizational context — team less familiar with this domain]
-
-**Adjustment to reference class estimate:**
-[e.g., Reference initiative came in at 280 hours. Differences above suggest a 20–30% premium — adjusted base for three-point most-likely input: 340 hours.]
-
-> If no comparable initiative exists: *"No comparable initiative exists in the Cost History Log. Estimate is based on [provenance type]. Confidence is [Low / Medium]. This record will serve as a reference class anchor for future similar initiatives."*
-
----
-
-### 4.4 ROM Estimate
-> Complete when estimate stage is ROM. Skip if proceeding directly to Three-Point.
-
-**Scope narrative:**
-[Describe what is known about the effort at this stage — enough to bound the estimate.]
-
-**ROM Range:**
-
-| Scenario | Effort Range | Cost Range | Basis |
-|---|---|---|---|
-| Low end | [e.g., 2–4 weeks] | [$X–$Y] | [e.g., If scope is limited to core flow only] |
-| High end | [e.g., 8–12 weeks] | [$X–$Y] | [e.g., If full integration and compliance work is required] |
-
-**ROM Confidence:** [Low / Medium]
-**Decision this ROM supports:** [e.g., Go/no-go on scoping investment / Board-level budget conversation / Roadmap slot decision]
-**Promote to Three-Point by:** YYYY-MM-DD
-
----
-
-### 4.5 Three-Point Estimate
-
-> Three-point estimation requires three inputs per work item or phase:
-> - **O (Optimistic):** Best realistic case — everything goes smoothly, no surprises
-> - **M (Most Likely):** Expected case — normal friction, typical unknowns
-> - **P (Pessimistic):** Worst realistic case — meaningful complications, not catastrophe
->
-> **Weighted estimate = (O + 4M + P) ÷ 6**
-> Apply at the phase level for most initiatives. Decompose to work-item level for large or high-risk efforts.
-
-#### Internal Labor
-
-| Phase / Work Item | Role(s) | O (hrs) | M (hrs) | P (hrs) | Weighted Est. (hrs) | Fully-Loaded Cost |
-|---|---|---|---|---|---|---|
-| [e.g., Discovery and design] | [PM, Designer] | | | | | |
-| [e.g., Backend development] | [Senior Eng] | | | | | |
-| [e.g., Frontend development] | [Mid Eng] | | | | | |
-| [e.g., QA and testing] | [QA, PM] | | | | | |
-| [e.g., Deployment and rollout] | [Eng, DevOps] | | | | | |
-| [e.g., Ongoing maintenance — annual] | [Eng] | | | | | |
-| **Subtotal — Internal Labor** | | | | | | |
-
-> Labor rates from Cost-and-Benefit-Framework Section 2.4.
-
-#### External and Vendor Costs
-
-| Item | Type | O ($) | M ($) | P ($) | Weighted Est. ($) | One-Time or Annual |
-|---|---|---|---|---|---|---|
-| [e.g., Third-party API license] | SaaS | | | | | Annual |
-| [e.g., Implementation services] | Professional services | | | | | One-time |
-| [e.g., Infrastructure — incremental] | Infrastructure | | | | | Annual |
-
-#### Uncertainty Buffer
-
-| | Value | Notes |
-|---|---|---|
-| **Internal labor subtotal** | | |
-| **Uncertainty buffer ([X]%)** | | [Applied to internal labor — see Cost-and-Benefit-Framework] |
-| **External / vendor costs** | | [Buffer not applied — use three-point range instead] |
-| **Opportunity cost** | | [State displaced work or note "not identified"] |
-| **Total one-time cost** | | |
-| **Total annual ongoing cost** | | |
-
-**Opportunity cost note:**
-[e.g., This initiative consumes approximately 320 engineer-hours over 8 weeks, representing roughly 40% of engineering capacity during that period. No specific roadmap initiative has been identified as displaced, but this should be reviewed against the current roadmap before approval.]
-
----
-
-### 4.6 Estimate Summary
-
-| | Optimistic | Most Likely | Pessimistic | Weighted |
+| Item | Rough Estimate | Basis / Provenance | Confidence | One-Time / Annual |
 |---|---|---|---|---|
-| **Total effort (hrs)** | | | | |
-| **Total one-time cost** | | | | |
-| **Total annual ongoing cost** | | | | |
-| **Estimated timeline** | | | | |
+| [e.g., Build effort] | [e.g., ~6–8 weeks, 2 eng] | [e.g., Expert judgment — analogous to Initiative X] | [Low / Med / High] | One-time |
+| [e.g., External / vendor] | [e.g., $X/yr] | [e.g., Current pricing tier] | [Med] | Annual |
+| [e.g., Ongoing maintenance] | [e.g., ~X hrs/mo] | [e.g., Similar feature] | [Low] | Annual |
 
-**Estimate confidence:** [High / Medium / Low]
-**Primary risk to estimate:** [The single assumption that, if wrong, most changes the estimate.]
-**Estimate reviewed by:** [Name] **Date:** YYYY-MM-DD
+**Opportunity cost:** [What this displaces, or "not identified."]
+**Provenance:** [Historical analogy / Structured decomposition / Expert judgment / Assumption — one line on what the figure rests on. Don't present a number without saying what it's based on.]
+
+> **When a higher-stakes financial commitment needs a decomposed, defensible estimate** — a budget envelope, an investment decision, a Business Case — use ROM or Three-Point per the Cost-and-Benefit-Framework (Part 2) and link or attach it here. Those are tools for the financial decision, not a required step for delivery.
 
 ---
 
-## 5. Functional Requirements
+## 5. Functional Requirements — Optional (Regulated / Compliance Overlay)
 
-> Capture requirements at the altitude the work needs, and expect them to change as you build and learn — this is a backlog, not a frozen specification. Add, drop, and re-shape items as increments deliver and feedback comes in.
+> **Most records skip this section.** Requirements live as user stories with acceptance criteria in Section 6 — a story plus its acceptance criteria *is* the requirement. Maintaining a separate numbered specification on top of stories is a traceability overlay, not a default.
 >
-> **Requirement IDs and traceability are optional.** The `REQ-001` IDs below exist to thread requirements → stories → tests for efforts that need an audit trail (regulated, compliance-bound, or large multi-team builds). For most incremental and maintenance work, skip the IDs and write lightweight acceptance criteria directly on the stories in Section 6.
+> **Use this register only when an audit trail is genuinely needed** — regulated, compliance-bound, or large multi-team builds where requirement → story → test traceability must be demonstrable. When you do use it, give each requirement a `REQ-` ID and link it from the relevant story (Section 6) and test case (Section 11.6).
 > **Priority**: P0 = Must have (launch blocker) | P1 = Should have | P2 = Nice to have
 
-### 5.1 Feature Area: [e.g., User Authentication]
+| ID | Requirement | Priority | Linked Story | Notes |
+|---|---|---|---|---|
+| REQ-001 | [e.g., User must be able to log in with email and password] | P0 | Story 1 | |
+| REQ-002 | [e.g., System must lock account after 5 failed attempts] | P0 | Story 1 | Security requirement |
+| REQ-010 | [e.g., Reports must generate within 5 seconds for 12 months of data] | P0 | Story 2 | Performance SLA |
 
-| ID | Requirement | Priority | Notes |
-|---|---|---|---|
-| REQ-001 | [e.g., User must be able to log in with email and password] | P0 | |
-| REQ-002 | [e.g., System must lock account after 5 failed attempts] | P0 | Security requirement |
-| REQ-003 | [e.g., User may optionally enable SSO via corporate IdP] | P1 | Enterprise segment |
-
-### 5.2 Feature Area: [e.g., Report Generation]
-
-| ID | Requirement | Priority | Notes |
-|---|---|---|---|
-| REQ-010 | [e.g., User must be able to generate a summary report for any date range] | P0 | |
-| REQ-011 | [e.g., Reports must generate within 5 seconds for data sets up to 12 months] | P0 | Performance SLA |
-| REQ-012 | [e.g., Reports must be exportable as PDF and CSV] | P1 | |
-
-> Add feature area sections as needed.
+> If you are not in a regulated or audit context, leave this section empty and work entirely from Section 6.
 
 ---
 
 ## 6. User Stories
 
+> **This is the primary home for requirements.** A story with its acceptance criteria *is* the requirement — for most work you need nothing more. The numbered register in Section 5 is an optional overlay used only in regulated or audit contexts.
+>
 > Format: **As a** [persona], **I want to** [action], **so that** [outcome].
 
 ---
@@ -340,7 +219,7 @@
 - [ ] AC-002: Given [context], when [action], then [expected result]
 - [ ] AC-003: Given [context], when [action], then [expected result]
 
-**Linked Requirements:** REQ-001, REQ-002
+**Linked Requirements (only if using the §5 overlay):** REQ-001, REQ-002
 **Priority:** P0
 
 ---
@@ -355,7 +234,7 @@
 - [ ] AC-004: Given [context], when [action], then [expected result]
 - [ ] AC-005: Given [context], when [action], then [expected result]
 
-**Linked Requirements:** REQ-010, REQ-011
+**Linked Requirements (only if using the §5 overlay):** REQ-010, REQ-011
 **Priority:** P0
 
 ---
@@ -610,7 +489,7 @@
 ### 11.6 Internal QA — Test Cases
 > *Applicable stages: Pilot, Beta, GA. Lightweight for Prototype. Skip for A/B (no new build).*
 
-> Maps requirements to test cases. Populate the Results column during QA.
+> Maps tests to what they verify. By default, link each test to a story / acceptance criterion in Section 6 — the "Linked Requirement" column is only needed when you are using the Section 5 regulated overlay. Populate the Results column during QA.
 
 | Test ID | Linked Requirement | Linked Story / AC | Test Description | Expected Result | Actual Result | Pass / Fail | Tested By | Date |
 |---|---|---|---|---|---|---|---|---|
@@ -627,16 +506,22 @@
 | TC-E002 | [e.g., Submit the same form twice rapidly] | [e.g., Duplicate submission prevented] | | |
 | TC-E003 | [e.g., Network drops mid-submission] | [e.g., Graceful failure, no partial record created] | | |
 
-### 11.8 Validation Sign-Off
+### 11.8 Validation Confirmation
 
-> Complete for GA stage. For earlier stages, sign-off is on the gate decision, not full QA.
+> The team confirms the work is validated and ready — owned by the people who built it, not a gate cleared by outside approvers. One line is enough: what was validated, by whom, and that it meets the bar for this stage.
 
-| Role | Name | Approval | Date |
-|---|---|---|---|
-| Product | | | |
-| Engineering Lead | | | |
-| QA Lead | | | |
-| Compliance / Legal (if applicable) | | | |
+**Validated and ready:** [Yes / Not yet — what's outstanding]
+**Confirmed by (team):** [Name(s) / role(s)] **Date:** YYYY-MM-DD
+**Notes:** [Anything a reader should know — known limitations carried forward, deferred edge cases, etc.]
+
+> **Formal multi-role sign-off (optional — GA and regulated contexts only):** where a release genuinely requires documented approval (compliance, contractual, or safety-critical), record it here.
+>
+> | Role | Name | Approval | Date |
+> |---|---|---|---|
+> | Product | | | |
+> | Engineering Lead | | | |
+> | QA Lead | | | |
+> | Compliance / Legal (if applicable) | | | |
 
 ---
 
@@ -676,7 +561,7 @@ In plain language, the goal of this build is: [One sentence — what are we buil
 ### 12.5 Definition of Done
 
 - [ ] The increment is working, validated, and delivers the value this record set out to deliver
-- [ ] Acceptance criteria for the agreed scope are passing (P0 requirements in Section 5 and stories in Section 6, where used)
+- [ ] Acceptance criteria for the agreed scope are passing (the P0 stories in Section 6; plus the Section 5 register where the regulated overlay is in use)
 - [ ] All test cases in Section 11 pass
 - [ ] No regressions in [existing feature / test suite]
 - [ ] Code is documented and follows [style guide / conventions link]
@@ -791,7 +676,7 @@ In plain language, the goal of this build is: [One sentence — what are we buil
 
 ### 14.4 Reference Class Record
 
-> This section is the initiative's contribution to the organization's cost history. Future initiatives will reference it via the Similarity Assessment in Section 4.3.
+> This section is the initiative's contribution to the organization's cost history. Future initiatives will reference it via reference-class forecasting (see Cost-and-Benefit-Framework, Reference Class and Cost History) when estimating comparable work.
 
 **Initiative summary for reference class use:**
 

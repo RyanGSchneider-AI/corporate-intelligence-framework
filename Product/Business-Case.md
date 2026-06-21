@@ -203,10 +203,10 @@ discovery phase? Be precise. Prioritizing a direction is not the same as approvi
 sequencing delivery — Product Build Records own that, and they deliver incrementally without
 returning here for approval.]
 
-**Next step if approved**:
-[e.g., Begin Product Build Record scoping — estimated completion YYYY-MM-DD]
-[e.g., Allocate engineering resources in next sprint planning]
-[e.g., Schedule discovery phase with Reference Customer X]
+**Next step if prioritized**:
+[e.g., Add the direction to the prioritized feature backlog so a team can pull it]
+[e.g., Open or update a Product Build Record as the team picks the work up]
+[e.g., Schedule a discovery phase with Reference Customer X]
 
 **Cost of delay**:
 [What is lost or risked if this decision is postponed?

@@ -54,6 +54,7 @@ By capturing not just *what* was decided but *why* — not just *how* work gets 
 │
 ├── Product
 │   ├── Business-Case.md               ← Overarching prioritization: why a direction is worth pursuing
+│   ├── Feature-Backlog.md             ← The prioritized list of features/directions teams pull from — the seam between prioritization and delivery
 │   ├── Product-Build-Record.md        ← Full initiative lifecycle — estimate, build, actuals, retrospective
 │   ├── Product-Chronicle.md           ← Living product intelligence: design principles, tradeoff rationale, customer understanding, competitive positioning, and internal narrative
 │   └── Product-Design-Guide.md        ← Persistent UI/UX standards, interaction patterns, voice and tone, and accessibility commitments — governs all Product Build Records that touch UI/UX
@@ -85,6 +86,7 @@ By capturing not just *what* was decided but *why* — not just *how* work gets 
 | [Cost-and-Benefit-Framework.md](./Financial/Cost-and-Benefit-Framework.md) | Standard methods for estimating revenue growth, cost reduction, and risk reduction benefits — and for estimating initiative costs consistently across all Business Cases | Finance and Product leadership | Product, Finance, Executive Leadership |
 | [Roles-and-Personas.md](./Market-and-Customer/Roles-and-Personas.md) | Role-based archetypes covering the full range of people who influence product design, purchase, adoption, and outcome — users, buyers, gatekeepers, champions, and internal and external affected parties | Research and market understanding | Product, Marketing, Sales, Executive Leadership |
 | [External-Stakeholders.md](./People-and-Relationships/External-Stakeholders.md) | Strategic partners, vendors, and regulatory bodies | Contracts, agreements, terms of service, and compliance obligations | Sales, Legal, Finance, Executive Leadership |
+| [Feature-Backlog.md](./Product/Feature-Backlog.md) | The single prioritized list of features and directions teams pull from — the seam between prioritization (Business Case, Strategy) and delivery (Build Records); ranked by relative business value, not absolute cost | Product — collectively owned | Product, Engineering, Executive Leadership |
 | [Funding-and-Business-Model.md](./Financial/Funding-and-Business-Model.md) | How the organization is capitalized, how it creates and captures value, and what it is currently optimizing for — essential context for strategy, product, and financial decisions | Finance and Executive leadership | Executive Leadership, Board, Finance, Product |
 | [Go-to-Market.md](./Sales/Go-to-Market.md) | Channels, sales motion, target segment strategy, and pricing and packaging — accommodates any combination of product-led, sales-led, and partner-led motions | Sales and Marketing leadership | Sales, Marketing, Product, Executive Leadership |
 | [Institutional-Knowledge.md](./Organizational-Intelligence/Institutional-Knowledge.md) | Living repository of organizational learning — decisions, lessons, constraints, and process | Collectively owned — fed from retros, reviews, and organizational feedback | All teams, new hires, AI agents |
@@ -162,6 +164,16 @@ These artifacts fall into two categories:
 
 When creating a per-effort document, copy the template and rename it to reflect the specific effort or period (e.g., `Product-Build-Record-user-onboarding-Q3-2026-ABTest.md`, `Business-Case-mobile-app.md`, `Calendar-2026.md`), and work through the relevant sections.
 
+### Two Levels: Prioritization and Delivery
+
+Product work runs at two distinct levels, and keeping them separate is what preserves team autonomy:
+
+**Prioritization — what is worth doing, and in what order.** Strategy-and-Intent sets direction; a Business-Case argues whether a significant direction earns investment; the Feature-Backlog holds the single prioritized list, ranked by relative business value. This level decides *what is most valuable next*.
+
+**Delivery — building and shipping it.** Durable teams pull the highest-value item they have capacity for from the Feature-Backlog and deliver it through Product-Build-Records, owning how and when the work is sequenced. This level decides *how it gets built*.
+
+The seam between them is a **pull, not a push**: work is never assigned down to teams, and delivery never routes back up through a Business Case for per-effort approval or sequencing. Prioritization sets the order; teams pull by capacity and own delivery. Learning flows back the other way — what a team discovers in delivery can re-rank the backlog or update a Business Case as context.
+
 ### Flexibility, Not Rigor
 No artifact needs to be complete before it is useful. Start with what you know. A partially populated Chronicle is more valuable than no Chronicle. A rough Business Case with honest estimates is more valuable than no Business Case.
 
@@ -223,7 +235,7 @@ A natural pull sequence for common efforts:
 | Starting effort | Pulls in next | Then pulls in |
 |---|---|---|
 | Product idea | Business-Case | Strategy-and-Intent, Cost-and-Benefit-Framework, Roles-and-Personas |
-| Building a product | Product-Build-Record | Product-Chronicle, Product-Design-Guide, Systems-and-Data (Business-Case only as prioritization context, if one exists) |
+| Building a product | Product-Build-Record | Feature-Backlog (pull the item), Product-Chronicle, Product-Design-Guide, Systems-and-Data (Business-Case only as prioritization context, if one exists) |
 | Closing a deal | Sales-Playbook | Go-to-Market, Roles-and-Personas, Competitive-Intelligence, Reference-Customers-and-Champions |
 | Hiring a key role | People-and-Talent-Strategy | Strategy-and-Intent, Internal-Stakeholders |
 | Launching in a new market | Go-to-Market | Roles-and-Personas, Competitive-Intelligence, Brand-and-Narrative, Strategy-and-Intent |
